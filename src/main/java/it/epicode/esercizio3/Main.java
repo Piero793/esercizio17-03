@@ -7,9 +7,10 @@ import org.slf4j.LoggerFactory;
 import java.util.Scanner;
 
 public class Main {
+    private static final Logger logger = LoggerFactory.getLogger(Main.class.getName());
+
     public static void main(String[] args) {
 
-        final Logger logger = LoggerFactory.getLogger(Main.class.getName());
         Scanner scanner = new Scanner(System.in);
 
         ContoCorrente cc = new ContoCorrente("Giuseppe", 1000.0);

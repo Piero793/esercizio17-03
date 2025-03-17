@@ -7,9 +7,11 @@ import java.util.Scanner;
 import java.util.Arrays;
 
 public class Main {
+
+    private static final Logger logger = LoggerFactory.getLogger(Main.class.getName());
+
     public static void main(String[] args) {
 
-        final Logger logger = LoggerFactory.getLogger(Main.class.getName());
         int[] array = new int[5];
 
         for (int i = 0; i < array.length; i++) {
@@ -48,7 +50,7 @@ public class Main {
                 System.out.println("Array aggiornato: " + Arrays.toString(array));
 
             } catch (Exception e) {
-                System.out.println("Errore di input, inserisci solo numeri validi.");
+                logger.error("Errore di input, inserisci solo numeri validi.");
                 scanner.nextLine();
             }
         }
